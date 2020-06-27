@@ -62,7 +62,7 @@ public class Product {
 	@Fetch(value = FetchMode.SUBSELECT)
 	private List<Color>colors;
 	
-	@OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy = "productS")
+	@ManyToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy = "productS")
 	@Fetch(value = FetchMode.SUBSELECT)
 	private List<Offer> offer;
 	public Product() {}

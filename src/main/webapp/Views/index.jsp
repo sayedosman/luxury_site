@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="front_end/js/jquery.easydropdown.js"></script>			
 </head>
 <body> 
- <jsp:include page="header.jsp" />
+ <%@include file="header.jsp" %>
 	<!--top-header-->
 	
 	<!--top-header-->

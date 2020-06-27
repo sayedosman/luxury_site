@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 
 import Entities.Brand;
 import Entities.Category;
@@ -22,6 +23,7 @@ public class CategoryRepositoryImp implements CategoryRepository {
 	    	Session s=sessionFactory.getCurrentSession();
 	    	s.beginTransaction();
 	    	s.save(category);
+	    	
 	    	s.getTransaction().commit();
 	return category;
 	    	

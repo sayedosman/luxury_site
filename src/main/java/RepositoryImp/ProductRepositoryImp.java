@@ -11,7 +11,6 @@ import Entities.Category;
 import Entities.Product;
 import Repository.ProductRepository;
 import util.connection;
-
 public class ProductRepositoryImp implements ProductRepository{
 
 	@Override
@@ -45,7 +44,7 @@ return product;
     	 SessionFactory sessionFactory=new connection().open();
 			 s=sessionFactory.getCurrentSession();
 			s.getTransaction().begin();
-    	Product product=(Product) s.createQuery("from Product where id like:id").setParameter("id", id).getResultList().get(0);
+    	Product product=(Product) s.createQuery("from Product where id like:id").setParameter("id", id).getSingleResult();
     	s.getTransaction().commit();
     	return product;	
 	}
